@@ -17,15 +17,13 @@ public class AuthService
     private readonly AppDBContext _context;
     private readonly JwtService _jwtService;
     private readonly JWT _jwtSettings;
-    private RefreshTokenRepository _refreshTokenRepository;
     public AuthService(AppDBContext context,
      JwtService jwtService,
-     IOptions<JWT> jwtSettings, RefreshTokenRepository refreshTokenRepo)
+     IOptions<JWT> jwtSettings)
     {
         _context = context;
         _jwtService = jwtService;
         _jwtSettings = jwtSettings.Value;
-        _refreshTokenRepository = refreshTokenRepo;
     }
     public async Task RegisterUserAsync(RegisterDto dto)
     {
@@ -112,7 +110,7 @@ public class AuthService
         };
 
         await _context.RefreshToken.AddAsync(newRefreshTokenEntity);
-        
+
         return new LoginResponseDto
         {
             AccessToken = newAccessToken,
