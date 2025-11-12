@@ -11,9 +11,9 @@ namespace UsersService.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        private readonly UsersDBContext _context;
+        private readonly AppDBContext _context;
         private readonly AuthService _authService;
-        public UsersController(UsersDBContext context, AuthService authService)
+        public UsersController(AppDBContext context, AuthService authService)
         {
             _context = context;
             _authService = authService;
@@ -42,8 +42,21 @@ namespace UsersService.Controllers
             await _authService.RegisterUserAsync(dto);
             return Created("", new { message = "Account Created Successfully" });
         }
-
-
+    
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto request)
+        {
+            try
+            {
+                var ipAddress = Request.HttpContext.Connection.RemoteIpAddress?.ToString();
+                var result = await _authService.LoginAsync(request.Email, request.Password, ipAddress);
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("Invalid credentials");
+            }
+        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUserAsync(Guid id, User user)

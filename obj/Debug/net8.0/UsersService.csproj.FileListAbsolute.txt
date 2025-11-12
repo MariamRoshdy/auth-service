@@ -105,3 +105,12 @@
 /home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/EFCore.NamingConventions.dll
 /home/mariam/FastLogistics/UsersService/obj/Debug/net8.0/UsersService.sourcelink.json
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

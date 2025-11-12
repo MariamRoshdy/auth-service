@@ -1,6 +1,6 @@
 namespace UsersService.Dtos;
 
-public class LoginDto
+public class LoginRequestDto
 {
     public required string Email { get; set; }
     public required string Password { get; set; } 
