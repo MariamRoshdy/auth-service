@@ -114,3 +114,4 @@
 /home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/mariam/FastLogistics/UsersService/bin/Debug/net8.0/AutoMapper.dll

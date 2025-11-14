@@ -22,6 +22,8 @@ builder.Services.Configure<JWT>(builder.Configuration.GetSection("JwtSettings"))
 
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingProfile).Assembly));
+
 
 // JWT Authentication
 builder.Services.AddAuthentication(options =>

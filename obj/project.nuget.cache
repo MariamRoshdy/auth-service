@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R00fqGBlHlAVOUzaG0gum7l/Gk6H1AURDhQm21RFphvtht1kfaTxVlSFvU98q74hrQ/edZWDW9yhqOiW3Z7lKA==",
+  "dgSpecHash": "sQcjQxb/mi+McIAEc68awKdNrg6lzrLpImEEprTz3ItwYHdJ/rNekIKXKniNyQwYoFLAW2aFhQI8KnpBlC+hFg==",
   "success": true,
   "projectFilePath": "/home/mariam/FastLogistics/UsersService/UsersService.csproj",
   "expectedPackageFiles": [
+    "/home/mariam/.nuget/packages/automapper/15.1.0/automapper.15.1.0.nupkg.sha512",
     "/home/mariam/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/mariam/.nuget/packages/efcore.namingconventions/8.0.0/efcore.namingconventions.8.0.0.nupkg.sha512",
     "/home/mariam/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

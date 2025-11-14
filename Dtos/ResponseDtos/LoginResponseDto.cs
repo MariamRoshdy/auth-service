@@ -1,4 +1,4 @@
-namespace UsersService.Dtos;
+namespace UsersService.Dtos.ResponseDtos;
 public class LoginResponseDto
 {
     public string AccessToken { get; set; } = string.Empty;

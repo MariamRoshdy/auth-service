@@ -4,6 +4,8 @@ using UsersService.Models;
 using Microsoft.EntityFrameworkCore;
 using UsersService.Dtos;
 using UsersService.ApplicationServices;
+using UsersService.Dtos.ResponseDtos;
+using AutoMapper;
 
 namespace UsersService.Controllers
 {
@@ -13,27 +15,30 @@ namespace UsersService.Controllers
     {
         private readonly AppDBContext _context;
         private readonly AuthService _authService;
-        public UsersController(AppDBContext context, AuthService authService)
+        private readonly IMapper _mapper;
+        public UsersController(AppDBContext context, AuthService authService, IMapper mapper)
         {
             _context = context;
             _authService = authService;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsersAsync()
+        public async Task<ActionResult<IEnumerable<UserInfoResponseDto>>> GetUsersAsync()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _context.Users.ToListAsync();
+            return _mapper.Map<List<User>, List<UserInfoResponseDto>>(users);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUserByIdAsync(Guid id)
+        public async Task<ActionResult<UserInfoResponseDto>> GetUserByIdAsync(Guid id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
-            return user;
+            return _mapper.Map<User, UserInfoResponseDto>(user);
         }
 
         [HttpPost("register")]

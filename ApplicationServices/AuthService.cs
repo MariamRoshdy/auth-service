@@ -6,9 +6,9 @@ using UsersService.Models;
 using System.Text.RegularExpressions;
 using UsersService.Helpers;
 using Microsoft.Extensions.Options;
-using UsersService.Data.Repositories;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
+using UsersService.Dtos.ResponseDtos;
 
 namespace UsersService.ApplicationServices;
 
