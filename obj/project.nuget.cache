@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sQcjQxb/mi+McIAEc68awKdNrg6lzrLpImEEprTz3ItwYHdJ/rNekIKXKniNyQwYoFLAW2aFhQI8KnpBlC+hFg==",
+  "dgSpecHash": "BBghUvPu5DxAC2aKuEgVwAh71FUKl3VOq3iq0JDDlqxNtlxyhFRjLJTmLmqMDhZsNhwl/tUzom8tCgZbE26hfA==",
   "success": true,
-  "projectFilePath": "/home/mariam/FastLogistics/UsersService/UsersService.csproj",
+  "projectFilePath": "/home/mariam/FastLogistics/auth-service/AuthService.csproj",
   "expectedPackageFiles": [
     "/home/mariam/.nuget/packages/automapper/15.1.0/automapper.15.1.0.nupkg.sha512",
     "/home/mariam/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",

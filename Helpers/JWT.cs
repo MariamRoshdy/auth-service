@@ -1,4 +1,4 @@
-namespace UsersService.Helpers;
+namespace AuthService.Helpers;
 public class JWT
 {
     public string Secret { get; set; } = string.Empty;

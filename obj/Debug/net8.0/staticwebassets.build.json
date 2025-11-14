@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "PxKV8+dm6vJrrmAofP6FIcoWUuoQw1aedX9DoE48FuU=",
-  "Source": "UsersService",
-  "BasePath": "_content/UsersService",
+  "Hash": "bXiANGpi5bI4LxmMvQVoz+i+r+x6nWb3Jz0rhEANYyE=",
+  "Source": "AuthService",
+  "BasePath": "_content/AuthService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

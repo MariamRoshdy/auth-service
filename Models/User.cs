@@ -1,4 +1,4 @@
-namespace UsersService.Models;
+namespace AuthService.Models;
 public class User
 {
     public Guid Id { get; set; }

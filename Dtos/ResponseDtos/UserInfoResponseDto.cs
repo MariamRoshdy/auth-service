@@ -1,4 +1,4 @@
-namespace UsersService.Dtos.ResponseDtos;
+namespace AuthService.Dtos.ResponseDtos;
 
 public class UserInfoResponseDto
 {

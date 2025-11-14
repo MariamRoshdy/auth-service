@@ -3166,11 +3166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mariam/FastLogistics/UsersService/UsersService.csproj",
-      "projectName": "UsersService",
-      "projectPath": "/home/mariam/FastLogistics/UsersService/UsersService.csproj",
+      "projectUniqueName": "/home/mariam/FastLogistics/auth-service/AuthService.csproj",
+      "projectName": "AuthService",
+      "projectPath": "/home/mariam/FastLogistics/auth-service/AuthService.csproj",
       "packagesPath": "/home/mariam/.nuget/packages/",
-      "outputPath": "/home/mariam/FastLogistics/UsersService/obj/",
+      "outputPath": "/home/mariam/FastLogistics/auth-service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mariam/.nuget/NuGet/NuGet.Config"

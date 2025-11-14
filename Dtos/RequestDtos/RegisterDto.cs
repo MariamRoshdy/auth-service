@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace UsersService.Dtos;
+namespace AuthService.Dtos;
 public class RegisterDto
 {
     public required string Name { get; set; }

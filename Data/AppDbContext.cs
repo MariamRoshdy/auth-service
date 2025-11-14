@@ -1,7 +1,7 @@
-using UsersService.Models;
+using AuthService.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace UsersService.Data
+namespace AuthService.Data
 {
     public class AppDBContext : DbContext
     {

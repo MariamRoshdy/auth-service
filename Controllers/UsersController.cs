@@ -1,25 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
-using UsersService.Data;
-using UsersService.Models;
+using AuthService.Data;
+using AuthService.Models;
 using Microsoft.EntityFrameworkCore;
-using UsersService.Dtos;
-using UsersService.ApplicationServices;
-using UsersService.Dtos.ResponseDtos;
+using AuthService.Dtos;
+using AuthService.Dtos.ResponseDtos;
 using AutoMapper;
+using AuthService.ApplicationServices;
 
-namespace UsersService.Controllers
+namespace AuthService.Controllers
 {
     [ApiController]
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
         private readonly AppDBContext _context;
-        private readonly AuthService _authService;
+        private readonly IdentityService _identityService;
         private readonly IMapper _mapper;
-        public UsersController(AppDBContext context, AuthService authService, IMapper mapper)
+        public UsersController(AppDBContext context, IdentityService identityService, IMapper mapper)
         {
             _context = context;
-            _authService = authService;
+            _identityService = identityService;
             _mapper = mapper;
         }
 
@@ -44,7 +44,7 @@ namespace UsersService.Controllers
         [HttpPost("register")]
         public async Task<ActionResult> RegisterUserAsync(RegisterDto dto)
         {
-            await _authService.RegisterUserAsync(dto);
+            await _identityService.RegisterUserAsync(dto);
             return Created("", new { message = "Account Created Successfully" });
         }
     
@@ -54,7 +54,7 @@ namespace UsersService.Controllers
             try
             {
                 var ipAddress = Request.HttpContext.Connection.RemoteIpAddress?.ToString();
-                var result = await _authService.LoginAsync(request.Email, request.Password, ipAddress);
+                var result = await _identityService.LoginAsync(request.Email, request.Password, ipAddress);
                 return Ok(result);
             }
             catch (UnauthorizedAccessException)

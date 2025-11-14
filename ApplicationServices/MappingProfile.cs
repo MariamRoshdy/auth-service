@@ -1,6 +1,6 @@
 using AutoMapper;
-using UsersService.Dtos.ResponseDtos;
-using UsersService.Models;
+using AuthService.Dtos.ResponseDtos;
+using AuthService.Models;
 
 public class MappingProfile : Profile
 {

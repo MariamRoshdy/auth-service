@@ -1,4 +1,4 @@
-namespace UsersService.Dtos;
+namespace AuthService.Dtos;
 public class TokenRefreshRequestDto
 {
     public string AccessToken { get; set; } = string.Empty;

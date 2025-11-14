@@ -1,4 +1,4 @@
-namespace UsersService.Dtos;
+namespace AuthService.Dtos;
 
 public class LoginRequestDto
 {

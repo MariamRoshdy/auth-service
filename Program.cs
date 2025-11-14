@@ -1,7 +1,7 @@
-using UsersService.Data;
+using AuthService.Data;
 using Microsoft.EntityFrameworkCore;
-using UsersService.ApplicationServices;
-using UsersService.Helpers;
+using AuthService.ApplicationServices;
+using AuthService.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -20,7 +20,7 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 );
 builder.Services.Configure<JWT>(builder.Configuration.GetSection("JwtSettings"));
 
-builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<IdentityService>();
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingProfile).Assembly));
 

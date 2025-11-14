@@ -3,10 +3,10 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using UsersService.Helpers;
-using UsersService.Models;
+using AuthService.Helpers;
+using AuthService.Models;
 using System.Security.Cryptography;
-namespace UsersService.ApplicationServices;
+namespace AuthService.ApplicationServices;
 
 public class JwtService
 {

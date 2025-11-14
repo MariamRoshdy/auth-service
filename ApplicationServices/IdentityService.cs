@@ -1,23 +1,23 @@
 using Microsoft.EntityFrameworkCore;
-using UsersService.Data;
-using UsersService.Dtos;
+using AuthService.Data;
+using AuthService.Dtos;
 using System.Security.Cryptography;
-using UsersService.Models;
+using AuthService.Models;
 using System.Text.RegularExpressions;
-using UsersService.Helpers;
+using AuthService.Helpers;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
-using UsersService.Dtos.ResponseDtos;
+using AuthService.Dtos.ResponseDtos;
 
-namespace UsersService.ApplicationServices;
+namespace AuthService.ApplicationServices;
 
-public class AuthService
+public class IdentityService
 {
     private readonly AppDBContext _context;
     private readonly JwtService _jwtService;
     private readonly JWT _jwtSettings;
-    public AuthService(AppDBContext context,
+    public IdentityService(AppDBContext context,
      JwtService jwtService,
      IOptions<JWT> jwtSettings)
     {

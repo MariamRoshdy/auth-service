@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using UsersService.Data;
+using AuthService.Data;
 
 #nullable disable
 
-namespace UsersService.Migrations
+namespace AuthService.Migrations
 {
     [DbContext(typeof(AppDBContext))]
     [Migration("20251112224558_Add_RefreshToken_Table")]
@@ -25,7 +25,7 @@ namespace UsersService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("UsersService.Models.RefreshToken", b =>
+            modelBuilder.Entity("AuthService.Models.RefreshToken", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace UsersService.Migrations
                     b.ToTable("refresh_token", (string)null);
                 });
 
-            modelBuilder.Entity("UsersService.Models.User", b =>
+            modelBuilder.Entity("AuthService.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -105,9 +105,9 @@ namespace UsersService.Migrations
                     b.ToTable("user", (string)null);
                 });
 
-            modelBuilder.Entity("UsersService.Models.RefreshToken", b =>
+            modelBuilder.Entity("AuthService.Models.RefreshToken", b =>
                 {
-                    b.HasOne("UsersService.Models.User", "User")
+                    b.HasOne("AuthService.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

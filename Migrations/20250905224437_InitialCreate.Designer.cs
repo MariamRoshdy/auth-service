@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using UsersService.Data;
+using AuthService.Data;
 
 #nullable disable
 
-namespace UsersService.Migrations
+namespace AuthService.Migrations
 {
     [DbContext(typeof(AppDBContext))]
     [Migration("20250905224437_InitialCreate")]
@@ -25,7 +25,7 @@ namespace UsersService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("UsersService.Models.User", b =>
+            modelBuilder.Entity("AuthService.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

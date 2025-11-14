@@ -1,5 +1,5 @@
-using UsersService.Data;
-namespace UsersService.Data.Repositories;
+using AuthService.Data;
+namespace AuthService.Data.Repositories;
 
 public class RefreshTokenRepository 
 {

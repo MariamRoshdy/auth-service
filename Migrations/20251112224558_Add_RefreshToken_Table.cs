@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace UsersService.Migrations
+namespace AuthService.Migrations
 {
     /// <inheritdoc />
     public partial class Add_RefreshToken_Table : Migration
