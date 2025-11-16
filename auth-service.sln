@@ -1,24 +1,157 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.2.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService.csproj", "{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {477F40C1-B13E-4090-9CAC-14645BECE5EB}
-	EndGlobalSection
-EndGlobal
+# Authentication Service
+
+## Architecture
+[Diagram here]
+
+## Features
+- JWT Authentication (Access + Refresh tokens)
+- Role-based authorization
+- Clean Architecture / DDD
+- Docker + PostgreSQL
+- 80%+ test coverage
+- API Gateway integration
+
+## Tech Stack
+- .NET 8
+- EF Core
+- PostgreSQL
+- Docker
+- xUnit
+
+## Running Locally
+[Clear instructions]
+
+## API Documentation
+[Swagger/Postman collection]
+
+## Design Decisions
+[Why you chose certain approaches]
+```
+
+**Why:** First impression for hiring managers.
+
+#### **8. Add Postman/Swagger Collection** (Half day)
+Pre-built collection with all APIs and auth flow.
+
+**Why:** Makes it easy for interviewers to test your code.
+
+#### **9. Deploy to Cloud** (1-2 days)
+Options (pick one):
+- **Azure Container Apps** (easiest for .NET)
+- **AWS ECS/Fargate**
+- **Railway.app** (free tier)
+- **Render.com** (free tier)
+
+**Why:** Shows you can deploy, not just develop. Huge differentiator.
+
+---
+
+## **Interview-Ready Portfolio Structure**
+```
+Your GitHub Profile
+├── auth-microservice ⭐ (Main showcase)
+│   ├── Comprehensive README
+│   ├── Architecture diagrams
+│   ├── Test coverage badge
+│   └── Live demo link
+│
+├── todo-microservice
+│   └── Links back to auth service
+│
+└── api-gateway
+    └── Routes to both services
+```
+
+---
+
+## **The Talking Points (Memorize These)**
+
+When interviewer asks about your project, hit these points:
+
+**Architecture:**
+> "I built a microservices architecture with separate auth and resource services. Used Clean Architecture principles with clear separation between domain, application, and infrastructure layers."
+
+**Security:**
+> "Implemented JWT-based authentication with access and refresh token rotation. Tokens are signed with HMAC-SHA256, and I validate issuer, audience, and expiration on every request."
+
+**Testing:**
+> "Wrote unit tests for business logic using Moq and xUnit, plus integration tests using Testcontainers to spin up real PostgreSQL instances. Currently at 80% coverage."
+
+**DevOps:**
+> "Fully containerized with Docker, using multi-stage builds for optimization. Wrote shell scripts for automated migrations. Deployed to Azure Container Apps with CI/CD via GitHub Actions."
+
+**Scalability:**
+> "Services communicate via REST with an API Gateway for routing. Each service has its own database following the database-per-service pattern. Easy to scale horizontally."
+
+---
+
+## **Common Interview Questions You'll Ace**
+
+✅ "How do you handle authentication in microservices?"  
+✅ "What's the difference between authentication and authorization?"  
+✅ "How do you secure JWT tokens?"  
+✅ "Explain your project architecture"  
+✅ "How do you test your code?"  
+✅ "What's Clean Architecture?"  
+✅ "How do you handle errors in your API?"  
+✅ "How would you scale this system?"  
+✅ "What databases have you worked with?"  
+✅ "Describe your Docker experience"
+
+---
+
+## **Priority Order (If Time-Constrained)**
+
+**Must Have (Week 1):**
+1. Clean Architecture refactor
+2. Unit tests (even just 5-10 key tests)
+3. One resource service
+4. Good README
+
+**Should Have (Week 2):**
+5. API Gateway
+6. Integration tests
+7. Logging
+8. Exception handling
+
+**Nice to Have (Week 3):**
+9. Cloud deployment
+10. CI/CD pipeline
+11. Monitoring dashboard
+
+---
+
+## **Red Flags to Avoid**
+
+❌ Hardcoded secrets in code  
+❌ No error handling  
+❌ No logging  
+❌ Messy code structure  
+❌ No README  
+❌ Can't run the project easily  
+❌ No tests at all  
+
+---
+
+## **Your 30-Second Pitch**
+
+> "I built a production-ready microservices system with authentication and authorization. It uses JWT tokens, follows Clean Architecture, has 80% test coverage, runs in Docker containers, and is deployed to Azure. I can show you the live demo right now."
+
+---
+
+## **Job Application Strategy**
+
+**LinkedIn Profile:**
+- Add "Microservices | .NET | Docker | JWT Authentication" to headline
+- Add project link to featured section
+- Post about what you're building (algorithm boost)
+
+**Resume:**
+```
+Software Engineer Project:
+- Built authentication microservice handling JWT-based auth with 
+  access/refresh tokens
+- Implemented Clean Architecture with 80% test coverage
+- Dockerized services with PostgreSQL and API Gateway
+- Deployed to Azure Container Apps with CI/CD pipeline
+- Tech: .NET 8, EF Core, Docker, PostgreSQL, xUnit

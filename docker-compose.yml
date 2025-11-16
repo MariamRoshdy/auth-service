@@ -9,7 +9,7 @@ services:
       - postgres
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
-      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=usersdb;Username=myuser;Password=mypassword"
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=auth-service-db;Username=myuser;Password=mypassword"
     ports:
       - "8080:8080"
     networks:
@@ -17,7 +17,7 @@ services:
 
   postgres:
     image: postgres:15
-    container_name: my-postgres
+    container_name: auth-postgres
     restart: always
     environment:
       POSTGRES_USER: "myuser"
@@ -27,6 +27,18 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: mariam@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
     networks:
       - backend
 
